@@ -8,32 +8,58 @@ using std::cout;        using std::string;
 
 int main()
 {
-    // read shape size
-    int row;
-    int col;
     
-    // ask user for row size
-    cout << "Please enter row size: ";
+    // draw square
+    int size = 5;
     
-    // store row size
-    cin >> row;
     
-    // ask user for column size
-    cout << "Please enter column size: ";
-    
-    // store row size
-    cin >> col;
-    
-    int row = size;
-    
-    for (r = 0; r != row; r++) {
-        if (r = 0 || r = row) {
-            cout << string("*", col);
+    for (int r = 0; r != size; r++) {
+        if (r == 0 || r == size - 1) {
+            cout << string(size, '*');
         }
         else {
-            cout << "*" + string(" ", col-2) + "*";
+            cout << "*" + string(size - 2, ' ') + "*";
         }
+        cout << endl;
     }
+    
+    cout << endl;
+    
+    // draw rectangle
+    int rows = 5;
+    int cols = 10;
+    
+    
+    for (int r = 0; r != rows; r++) {
+        if (r == 0 || r == rows - 1) {
+            cout << string(cols, '*');
+        }
+        else {
+            cout << "*" + string(cols - 2, ' ') + "*";
+        }
+        cout << endl;
+    }
+    
+    cout << endl;
+    
+    
+    // draw triangle
+    size = 9;
+    rows = 5;
+    
+    for (int r = 0; r != rows; r++) {
+        if (r == 0) {
+            cout << string(size, '*');
+        }
+        else if (r == rows - 1) {
+            cout << string(size/2, ' ') + "*" + string(size/2, ' ');
+        }
+        else {
+            cout << string(r, ' ') + "*" + string(size - 2*r - 2, ' ') + "*" + string(r, ' ');
+        }
+        cout << endl;
+    }
+
 	return 0;
 }
 
