@@ -19,7 +19,7 @@ int main()
 	const string greeting = "Hello, " + name + "!";
 
 	// the number of blanks surrounding the greeting
-	const int pad = 5;
+	const int pad = 0;
 
 	// the number of rows and columns to write
 	const int rows = pad * 2 + 3;
@@ -46,14 +46,18 @@ int main()
                 
 				// are we on the border?
 				if (r == 0 || r == rows - 1 ||
-				    c == 0 || c == cols - 1)
+                    c == 0 || c == cols - 1) {
 					cout << "*";
-				else
+                    ++c;
+                }
+                else {
                     nSpaces++;
 					//cout << " ";
-				++c;
-                string spaces = string(" ", nSpaces);
+                }
+				
+                string spaces = string(nSpaces, ' ');
                 cout << spaces;
+                c = c + nSpaces;
 			}
 		}
 
