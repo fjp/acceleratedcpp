@@ -23,4 +23,17 @@ windows
 			append ;C:\MinGW\bin to PATH variable
 
 
+Here is a nice online solution to the exercises:
+http://mathalope.co.uk/accelerated-c-solutions/
+
+Solutions from Author:
+https://github.com/bitsai/book-exercises/tree/master/Accelerated%20C%2B%2B
+
+
+Hints:
+
+chapter 03
+3-1:
+https://www.daniweb.com/software-development/cpp/threads/38878/accelerated-c-question-about-an-exercise
+
 
